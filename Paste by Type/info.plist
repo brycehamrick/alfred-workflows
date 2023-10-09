@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.pastebytype</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>1AEB2C04-C89D-4F16-8CA6-5A7763EB1333</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>26E2701E-EEF6-41C9-913C-F8C2ACCE651F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Bryce Hamrick</string>
+	<key>description</key>
+	<string>Pastes text by simulating keyboard input</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Paste by Type</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run
+  if "{query}" is ""
+    tell application "System Events" to keystroke the clipboard
+  else
+    tell application "System Events" to keystroke "{query}"
+  end if
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>26E2701E-EEF6-41C9-913C-F8C2ACCE651F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>type</string>
+				<key>subtext</key>
+				<string>Leave blank to use clipboard contents or enter text here</string>
+				<key>text</key>
+				<string>Paste by Type</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>1AEB2C04-C89D-4F16-8CA6-5A7763EB1333</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>1AEB2C04-C89D-4F16-8CA6-5A7763EB1333</key>
+		<dict>
+			<key>xpos</key>
+			<real>130</real>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>26E2701E-EEF6-41C9-913C-F8C2ACCE651F</key>
+		<dict>
+			<key>xpos</key>
+			<real>320</real>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.0.1</string>
+	<key>webaddress</key>
+	<string>https://bhamrick.com</string>
+</dict>
+</plist>
